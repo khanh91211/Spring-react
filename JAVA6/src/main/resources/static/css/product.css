@@ -1,0 +1,142 @@
+@charset "ISO-8859-1";
+
+.noidungProduct{
+	width:100%;	
+}
+
+.col-lg-3{
+	width:10%;
+	height:100vh;
+	float:left;
+	margin-left: 5em;	
+}
+
+.small-container{
+	width: 80%;
+	padding-left: 25px;
+	padding-right: 25px;
+	float:left;
+	margin-left: 25px;
+}
+
+.card{
+	height:28em;
+	margin-left:3em;
+	padding-left:3em;
+	float:left;
+	width:26%;
+	padding: 10px;
+	margin-bottom: 4em;
+	border: 1px solid #CCCCCC;
+}
+
+.card img{
+	width:15em;
+	height: 15em;
+}
+
+.card h4{
+	text-align:center;
+	font-family: 'Kanit' , sans-serif;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.card p{
+	text-align: center;
+	font-family: 'Kanit' , sans-serif;
+	font-size: 20px;
+	font-weight: 200;
+	margin-bottom: 1em;
+}
+
+.card .btn-cart{
+	text-align:center;
+	text-decoration: none;
+	color: white;
+	font-family: 'Kanit' , sans-serif;
+	font-size: 14px;
+	font-weight: 900;
+	padding: 15px;
+	background: #ff523b;
+	margin-left: 4em;
+	margin-bottom: 3m;
+}
+
+.card .btn-cart:hover{
+	color: white;
+	background: #363636;
+}
+
+.title{
+	text-align: center;
+	margin: 0 auto 80px;
+	position: relative;
+	line-height: 60px;
+	color: #555;
+}
+
+.title::after {
+	content: '';
+	background: #ff523b;
+	width:80px;
+	height: 5px;
+	border-radius: 5px;
+	position: absolute;
+	bottom: 0;
+	left:50%;
+	transform: translateX(-50%);	
+}
+
+h4{
+	color:#555;
+}
+
+/* cate */
+.sidebar-cate{
+	font-family: 'Kanit' , sans-serif;
+	font-size: 27px;
+	color: #555;
+}
+
+.list-cate{
+	background: white;
+	padding-left: 0px;
+    text-align: left;
+    font-family: 'Kanit' , sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+    margin-top: 10px;
+    border: none; 
+    width: 200px;
+    height: 35px;
+}
+
+.list-cate:hover {
+	color: #ff523b;
+}
+
+.col-lg-3 a{
+	color:#555;
+}
+
+.col-lg-3 a:hover{
+	color:#ff523b;
+}
+
+.select_cate{
+	margin-top: 5px;
+    font-family: 'Kanit' , sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+}
+
+.a-addcart{
+	text-decoration: none;
+}
+
+

@@ -1,0 +1,113 @@
+@import url('http://fonts.googleapis.com/css2?
+	family=Poppins:wght@200;300;400;500;600;700;
+	800&display-swap');
+
+*{	
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+.showcase{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	z-index: 2;
+	color: white;
+	margin-bottom: 20%;
+}
+
+.nav-link{
+	font-size: large;
+	margin-right: 25px;
+	color: white;
+	text-decoration: none;
+}
+
+.navbarhd{
+	float: right;
+	position: absolute;
+	top: 0;
+	left: 57em;/*chinh can le245%*/
+	z-index: 1000;
+	padding-top: 50px;
+	display: flex;
+	align-items: center;
+	color: white;
+}
+
+.showcase video{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.8;
+}
+
+.overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.showcase header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	padding: 30px 70px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo a{
+	cursor: pointer;
+}
+
+.text{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	margin-top: 200px;
+	padding: 30px 70px;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	z-index: 10;
+}
+
+.text h3{
+	font-size: 4em;
+	font-weight: 800;
+	line-height: 1em;
+	text-transform: uppercase;
+	max-width: 800px;
+}
+
+.text p{
+	font-size: 1.1em;
+	margin: 20px 0;
+	font-weight: 400;
+	max-width: 750px;
+}
+
+.dropdownTK{
+	margin-left: 5px;
+	box-shadow: 0.1em red;
+	background-color: #1a191a;
+	max-width: 100px;
+	color: white;
+}
+
+.linkTK{
+	color: white;
+	text-decoration: none;
+}

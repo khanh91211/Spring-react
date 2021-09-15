@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{/layout :: dynamic(~{::body})}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Product-SHOPKHANH</title>
+<link rel="stylesheet" type="text/css" href="./css/product.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.js"></script>
+</head>
+<body ng-app="shopping-cart-app" ng-controller="shopping-cart-ctrl">
+<div class="noidungProduct">
+	<h2 class="title">Products</h2>
+	<div class="col-lg-3">
+		<!-- product -->
+		<h2 class="sidebar-cate"><b>Categories</b></h2>
+		<hr />
+		<form method="GET" th:action="@{http://localhost:8080/product}">
+			<div class="select_cate">
+				<button name="cate_sort" type="submit" class="list-cate" value="">Tất cả</button>
+				<button th:each="cate: ${categr}" name="cate_sort" type="submit" class="list-cate" th:value="${cate.id}" th:utext=" ${cate.name}"></button>
+			</div>
+			<!--  <select name="cate_sort" class="select_cate">
+				<option class="list-cate" value="">All</option>
+				<option class="list-cate" th:each="cate: ${categr}" th:value="${cate.id}"><i class="fa fa-caret-right" aria-hidden="true" th:utext=" ${cate.name}"> </i></option>
+			</select>
+			<button class="find_cate" value="Submit">Find</button>-->
+		</form>
+	</div>
+	<div class="small-container">
+		<div class="row">
+			<div th:each="pro: ${prod}" class="card" >
+				<a>
+					<img th:src="@{${'/images/'+ pro.image}}" />
+				</a>
+				<h4 th:utext="${pro.name}"></h4>
+				<p th:utext="${pro.price}">Price $</p>
+				<!--  th:href="@{${'/cart/'+pro.id}}"-->
+				<a th:href="@{|/product/addcart?id_addcart=${pro.id}|}" class="add-to-cart">
+					<button class="btn-cart" type="button" onclick="addCart()">
+						<i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart
+					</button>	
+				</a>
+			</div>
+		</div>
+	</div>		
+</div>
+	<script type="text/javascript" src="./js/cart.js"></script>
+</body>
+</html>

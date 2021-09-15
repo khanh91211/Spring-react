@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{/layout :: dynamic(~{::body})}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Cart-SHOPKHANH</title>
+<link rel="stylesheet" type="text/css" href="./css/content.css"/>
+<link rel="stylesheet" type="text/css" href="./css/cart.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<!-- Your Cart is empty -->
+	<div class="noidungCart" >
+		<h2 class="title">Cart</h2>
+		<table style="width:100%" class="show-cart" id="cart">
+		  <tr class="title-tbl">
+		  	<td></td>
+		  	<td>Image</td>
+		    <td>Description</td>
+		    <td>Quantity</td>
+		    <td>Price</td>
+		  </tr>
+		  <tr class="row-tbl" th:each="cart: ${proCart}" id="col-sp">
+		  	<td><button class="remove-cart" onclick="xoa(this)"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+		  	<td class="td-img"><img class="img-cart" th:src="@{${'/images/'+ cart.image}}"></td>
+		    <td th:utext="${cart.name}"></td>
+		    <td>
+		    	<input type="number" class="amout-cart" id="soluong" onchange="tong1SP" value="1">
+		    </td>
+		    <td id="giatien" data-price="50" th:utext="${cart.price}"></td>
+		  </tr>
+		</table>
+		<div class="total">
+			<h3>Total $<span id="tongtien" class="total-cart">0</span></h3><br>
+			<a class="a-pay" href="">Payment</a>
+		</div>
+	</div>
+	<script type="text/javascript" src="./js/cart.js"></script>
+</body>
+</html>

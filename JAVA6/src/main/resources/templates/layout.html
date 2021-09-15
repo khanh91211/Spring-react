@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:fragment="dynamic(view)">
+<head>
+<meta charset="UTF-8">
+<title>SHOPKHANH</title>
+<link rel="stylesheet" type="text/css" href="./css/header.css"/>
+<link rel="stylesheet" type="text/css" href="./css/footer.css"/>
+<link rel="stylesheet" type="text/css" href="./css/product.css"/>
+<link rel="stylesheet" type="text/css" href="./css/cart.css"/>
+<link rel="stylesheet" type="text/css" href="./css/content.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div>
+		<div th:fragment="header">
+			<section class="showcase">
+			  	<header>
+			  	<div class="logo">
+			  		<a>
+			  			SHOPKHANH
+			  		</a>
+			    </div>
+			    <div class="mr-auto"></div>
+			    <div class="navbarhd">
+			      <a class="nav-link" th:href="@{/index}">Home</a>
+			      <a class="nav-link" th:href="@{/product}">Product</a>
+			      <a class="nav-link-cart" th:href="@{/cart}" data-toggle="modal" data-target="#cart">
+			      	<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+			      	<span class="total-count">0</span>
+			      </a>
+			      
+			      <div class="dropdown">
+					  <a class="dropbtn">TENTK</a>
+					  <div class="dropdown-content">
+					    <a href="#">Purchase history</a>
+					    <a href="#">Change password</a>
+					    <a href="#">Log out</a>
+					  </div>
+					</div>
+			    </div>
+				</header>
+				<video width="100%" autoplay loop muted >
+				  <source src="./video/video2.mp4" type="video/mp4">
+				</video>
+				<div class="overlay"></div>
+				<div class="text">
+					<h3>Great experience with phone</h3>
+					<p>Think different. With the phone, it’s all possible. when it’s all possible, life’s good.</p>
+				</div>
+			</section>
+		</div>
+		
+			<div th:replace="${view}">
+		    	
+		    </div>
+			
+			<div class="footer-main">
+				<footer>
+				<div class="footer">
+					<h3>SHOPKHANH</h3>
+					<strong>Contact Info</strong>
+					<p><i class="fa fa-phone" aria-hidden="true"></i> +84-888-888-888
+					<br/><i class="fa fa-envelope-o" aria-hidden="true"></i> shopkhanh.contact@gmail.com</p>
+					<a href="https://www.facebook.com/">
+						<i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href="https://www.instagram.com/">
+						<i class="fa fa-instagram" aria-hidden="true"></i></a>
+					<a href="https://www.twitter.com/">
+						<i class="fa fa-twitter" aria-hidden="true"></i></a>
+				</div>
+				</footer>
+				<hr class="hrcoppy"/>
+				<p class="textcoppy">Coppy: SHOPKHANH.</p>
+				<div class="overlay-footer"></div>
+			</div>
+		</div>
+		<script type="text/javascript" src="./js/cart.js"></script>
+</body>
+</html>
